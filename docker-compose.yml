@@ -6,6 +6,8 @@ services:
     container_name: wp_${PROJECT_NAME}
     ports:
       - ${IP}:80:80 # change ip if required
+      - "3000:3000"
+      - "3001:3001"
     restart: always
     volumes:
       - ./config/php.conf.ini:/usr/local/etc/php/conf.d/conf.ini
